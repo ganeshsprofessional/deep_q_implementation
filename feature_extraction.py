@@ -172,7 +172,8 @@ def extract_receiver(filename):
     """
     match = re.search(r"traceJSON-(\d+)-(\d+)-", filename)
     if match:
-        return int(match.group(2))
+        #veremi-extension specific
+        return int(match.group(1))
     else:
         return None
 
