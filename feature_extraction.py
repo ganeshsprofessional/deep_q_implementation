@@ -199,7 +199,7 @@ def get_dataframe(files):
     final_df = pd.concat(dfs, ignore_index=True)
     return final_df
 
-def get_features(files):
+def get_features_logs(files):
     dfs = []
     # i = 0
     for file_path in files:
