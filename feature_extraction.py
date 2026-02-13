@@ -113,7 +113,7 @@ def jsonl_to_dataframe(input_file, output_csv=None):
     return df
 
 
-def extract_state_vector(df): 
+def extract_feature_vector(df): 
     #calculate S(j,t) and X(j,t)
     spd_cols = [c for c in ["spd_x", "spd_y", "spd_z"] if c in df.columns]
     df["speed"] = np.sqrt((df[spd_cols] ** 2).sum(axis=1))
